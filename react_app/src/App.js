@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import StudentList from './Components/studentList';
+import React, { useState } from 'react'
+import Wrapper from './Components/wrapper'
+
+
+
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import CardView from './Components/cardView';
+
+
 
 function App() {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Box sx={{
+        height: 224,
+      }}>
+        <Wrapper/>      
+    </Box>
   );
 }
 
